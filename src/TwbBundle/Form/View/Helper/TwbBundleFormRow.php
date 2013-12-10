@@ -70,6 +70,13 @@ class TwbBundleFormRow extends \Zend\Form\View\Helper\FormRow
         //Column size
         if ($iColumSize = $oElement->getOption('column-size')) $sRowClass .= 'col-lg-' . $iColumSize;
 
+        //form-inline added by cLu for nesting inline form inside horizontal form without fucking up layout
+        if($inline = $oElement->getOption('twb-layout')==\TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE)
+            $sRowClass .= 'form-'.\TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE." ";
+
+        //added by cLu to attach classes to formgroup divs
+        if($formGroupClass = $oElement->getOption('twb-formgroup-class'))$sRowClass .= $formGroupClass;
+
         //Render element
         $sElementContent = $this->renderElement($oElement);
 
