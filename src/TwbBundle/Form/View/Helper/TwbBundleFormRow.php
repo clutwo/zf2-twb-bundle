@@ -72,7 +72,7 @@ class TwbBundleFormRow extends \Zend\Form\View\Helper\FormRow
 
         //form-inline added by cLu for nesting inline form inside horizontal form without fucking up layout
         if($inline = $oElement->getOption('twb-layout')==\TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE)
-            $sRowClass .= 'form-'.\TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE." ";
+            $sRowClass .= ' form-'.\TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE." ";
 
         //added by cLu to attach classes to formgroup divs
         if($formGroupClass = $oElement->getOption('twb-formgroup-class'))$sRowClass .= $formGroupClass;
