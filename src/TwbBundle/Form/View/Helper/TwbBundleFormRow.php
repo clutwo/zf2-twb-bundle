@@ -141,8 +141,8 @@ class TwbBundleFormRow extends \Zend\Form\View\Helper\FormRow
                 switch ($sLayout) {
                     //Hide label for "inline" layout
                     case \TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_INLINE:
-                        if (empty($aLabelAttributes['class'])) $aLabelAttributes['class'] = 'sr-only';
-                        elseif (!preg_match('/(\s|^)sr-only(\s|$)/', $aLabelAttributes['class'])) $aLabelAttributes['class'] = trim($aLabelAttributes['class'] . ' sr-only');
+//                        if (empty($aLabelAttributes['class'])) $aLabelAttributes['class'] = 'sr-only';
+//                        elseif (!preg_match('/(\s|^)sr-only(\s|$)/', $aLabelAttributes['class'])) $aLabelAttributes['class'] = trim($aLabelAttributes['class'] . ' sr-only');
                         break;
 
                     case \TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_HORIZONTAL:
